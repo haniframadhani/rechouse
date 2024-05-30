@@ -1,13 +1,84 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./resources/**/*.blade.php"],
-  theme: {
-    // container: {
-    //   center: true,
-    // },
-    extend: {
-    },
-  },
-  plugins: [],
-}
+    content: ["./resources/**/*.blade.php"],
 
+    theme: {
+        extend: {
+            fontFamily: {
+                sans: [
+                    "Inter",
+                    "ui-sans-serif",
+                    "system-ui",
+                    "sans-serif",
+                    "Apple Color Emoji",
+                    "Segoe UI Emoji",
+                    "Segoe UI Symbol",
+                    "Noto Color Emoji",
+                ],
+            },
+            colors: {
+                aureolin: {
+                    DEFAULT: "#fce207",
+                    100: "#ffface",
+                    200: "#fef49c",
+                    300: "#feef6b",
+                    400: "#fde939",
+                    500: "#fce207",
+                    600: "#ceba02",
+                    700: "#9a8b02",
+                    800: "#675d01",
+                    900: "#332e01",
+                },
+                white_smoke: {
+                    DEFAULT: "#f5f5f5",
+                    100: "#FDFDFD",
+                    200: "#FBFBFB",
+                    300: "#F9F9F9",
+                    400: "#F7F7F7",
+                    500: "#F5F5F5",
+                    600: "#C4C4C4",
+                    700: "#939393",
+                    800: "#626262",
+                    900: "#313131",
+                },
+                emerald: {
+                    DEFAULT: "#79c980",
+                    100: "#E4F4E5",
+                    200: "#C9E9CC",
+                    300: "#AEDFB2",
+                    400: "#93D498",
+                    500: "#79C980",
+                    600: "#4AB753",
+                    700: "#378A3E",
+                    800: "#255C29",
+                    900: "#122E15",
+                },
+                indigo_dye: {
+                    DEFAULT: "#184666",
+                    100: "#C1DDF0",
+                    200: "#83BAE2",
+                    300: "#4598D3",
+                    400: "#2771A5",
+                    500: "#184666",
+                    600: "#133853",
+                    700: "#0F2A3E",
+                    800: "#0A1C29",
+                    900: "#050E15",
+                },
+                raisin_black: {
+                    DEFAULT: "#242021",
+                    100: "#D5D0D1",
+                    200: "#ACA1A4",
+                    300: "#817376",
+                    400: "#52494B",
+                    500: "#242021",
+                    600: "#1C191A",
+                    700: "#151313",
+                    800: "#0E0C0D",
+                    900: "#070606",
+                },
+            },
+        },
+    },
+    plugins: [],
+};

@@ -7,6 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>pengaturan | {{ config('app.name') }}</title>
     <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
+    <link rel="shortcut icon" href="{{ URL::asset('/storage/favicons/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ URL::asset('/storage/favicons/favicon.ico') }}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{ URL::asset('/storage/favicons/apple-touch-icon.png') }}">
+    <link rel="icon" href="{{ URL::asset('/storage/favicons/favicon-16x16.png') }}">
+    <link rel="icon" href="{{ URL::asset('/storage/favicons/favicon-32x32.png') }}">
+    <link rel="icon" href="{{ URL::asset('/storage/favicons/android-chrome-192x192.png') }}">
+    <link rel="icon" href="{{ URL::asset('/storage/favicons/android-chrome-512x512.png') }}">
 </head>
 
 <body>
@@ -17,9 +24,6 @@
                 {{ Session::get('error') }}
             </div>
         @endif
-        {{-- @error('nama')
-            <p class="mt-2 text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
-        @enderror --}}
         <form action="{{ route('changePassword') }}" method="post" class="w-6/12 mx-auto">
             @csrf
             <div class="mb-5">
@@ -37,10 +41,10 @@
                         class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-s-0 border-gray-300 rounded-e-md cursor-pointer">
                         <div id="toggle-current">
                             <div id="eye-current" class="block">
-                                {!! file_get_contents(public_path('storage\img\icons\eye.svg')) !!}
+                                {!! file_get_contents(public_path('storage/icons/eye.svg')) !!}
                             </div>
                             <div id="eye-hide-current" class="hidden">
-                                {!! file_get_contents(public_path('storage\img\icons\eye-off.svg')) !!}
+                                {!! file_get_contents(public_path('storage/icons/eye-off.svg')) !!}
                             </div>
                         </div>
                     </span>
@@ -64,10 +68,10 @@
                         class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-s-0 border-gray-300 rounded-e-md cursor-pointer">
                         <div id="toggle-new">
                             <div id="eye-new" class="block">
-                                {!! file_get_contents(public_path('storage\img\icons\eye.svg')) !!}
+                                {!! file_get_contents(public_path('storage/icons/eye.svg')) !!}
                             </div>
                             <div id="eye-hide-new" class="hidden">
-                                {!! file_get_contents(public_path('storage\img\icons\eye-off.svg')) !!}
+                                {!! file_get_contents(public_path('storage/icons/eye-off.svg')) !!}
                             </div>
                         </div>
                     </span>
@@ -92,10 +96,10 @@
                         class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-s-0 border-gray-300 rounded-e-md cursor-pointer">
                         <div id="toggle-re-new">
                             <div id="eye-re-new" class="block">
-                                {!! file_get_contents(public_path('storage\img\icons\eye.svg')) !!}
+                                {!! file_get_contents(public_path('storage/icons/eye.svg')) !!}
                             </div>
                             <div id="eye-hide-re-new" class="hidden">
-                                {!! file_get_contents(public_path('storage\img\icons\eye-off.svg')) !!}
+                                {!! file_get_contents(public_path('storage/icons/eye-off.svg')) !!}
                             </div>
                         </div>
                     </span>
