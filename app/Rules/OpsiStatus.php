@@ -14,7 +14,8 @@ class OpsiStatus implements ValidationRule
      */
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
-        if ($value != 'menunggu konfirmasi' && $value != 'terkonfirmasi' && $value != 'selesai' && $value != 'batal') {
+        $opsi = ["menunggu konfirmasi", "terkonfirmasi", "selesai", "batal"];
+        if (!in_array($value, $opsi)) {
             $fail('opsi tidak ada');
         }
     }
