@@ -7,10 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>pendaftaran | {{ config('app.name') }}</title>
     <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
+    <link rel="shortcut icon" href="{{ URL::asset('/storage/favicons/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ URL::asset('/storage/favicons/favicon.ico') }}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{ URL::asset('/storage/favicons/apple-touch-icon.png') }}">
+    <link rel="icon" href="{{ URL::asset('/storage/favicons/favicon-16x16.png') }}">
+    <link rel="icon" href="{{ URL::asset('/storage/favicons/favicon-32x32.png') }}">
+    <link rel="icon" href="{{ URL::asset('/storage/favicons/android-chrome-192x192.png') }}">
+    <link rel="icon" href="{{ URL::asset('/storage/favicons/android-chrome-512x512.png') }}">
 </head>
 
 <body>
-    {{-- {{ dd($registrations->total()) }} --}}
     @include('components.sidebar')
     <div class="p-4 sm:ml-48">
         <h1 class="font-bold capitalize text-3xl mb-5">daftar booking</h1>

@@ -135,4 +135,35 @@ class RegistrationController extends Controller
         }
         return '62' . $phone;
     }
+
+    /**
+     * store
+     *
+     * @param  mixed $request
+     * @return RedirectResponse
+     */
+    public function indexPost(Request $request):RedirectResponse{
+        $request->validate([
+            'nama' => 'required|min:3',
+            'no_hp' => 'required|phone:ID',
+            'waktu_booking' => 'required|date|after:today',
+        ], [
+            'nama.required' => 'masukkan nama',
+            'nama.min' => 'nama harus lebih dari atau sama dengan 3 karakter',
+            'no_hp.required' => 'masukkan no hp',
+            'no_hp.phone' => 'no hp tidak valid',
+            'waktu_booking.required' => 'pilih tanggal',
+            'waktu_booking.date' => 'tanggal tidak valid',
+            'waktu_booking.after' => 'pilih tanggal setelah hari ini'
+        ]);
+
+        Registration::create([
+            'nama' => $request->nama,
+            'no_hp' => RegistrationController::checkPhone($request->no_hp),
+            'status' => 'menunggu konfirmasi',
+            'waktu_booking' => $request->waktu_booking,
+        ]);
+
+        return redirect()->route('index')->with(['success' => 'kami akan menghubungimu melalui whatsapp dari nomor yang disubmit']);
+    }
 }

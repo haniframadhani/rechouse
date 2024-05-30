@@ -1,2 +1,9 @@
 *
+!icons/
+!img/
+img/*
+!pdf/
+pdf/*
+!favicons/
+favicons/*
 !.gitignore
