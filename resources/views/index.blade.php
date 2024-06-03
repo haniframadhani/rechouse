@@ -54,7 +54,7 @@
     <section class="mt-14" id="review">
       <h2 class="capitalize font-bold text-3xl text-raisin_black-700 mb-2">kata mereka tentang kami</h2>
       {{-- google review by sociablekit --}}
-      <div class='sk-ww-google-reviews' data-embed-id='25414526'></div>
+      <div class='sk-ww-google-reviews' data-embed-id='{{env('SOCIABLEKIT_ID')}}'></div>
       <script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer></script>
     </section>
     <section class="mt-14" id="booking">
@@ -69,7 +69,7 @@
                       bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500
                     @enderror" placeholder="John" value="{{ old('nama') }}" autocomplete="off" />
             @error('nama')
-            <p class="mt-2 text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
+            <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
             @enderror
           </div>
           <div>
@@ -80,8 +80,9 @@
                       bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500
                     @enderror" placeholder="084893116728" value="{{ old('no_hp') }}" autocomplete="off" />
             @error('no_hp')
-            <p class="mt-2 text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
+            <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
             @enderror
+            <p class="mt-2 text-sm text-red-800">*gunakan nomor whatsapp</p>
           </div>
           <div>
             <label for="waktu_booking" class="block mb-2 text-sm font-medium text-gray-900 capitalize @error('waktu_booking') text-red-700
@@ -91,13 +92,13 @@
                       bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500
                     @enderror" value="{{ old('waktu_booking') }}" />
             @error('waktu_booking')
-            <p class="mt-2 text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
+            <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
             @enderror
           </div>
         </div>
         <button type="submit" class="px-8 py-4 text-base focus:outline-none bg-aureolin-500 hover:bg-aureolin-600 focus:ring-2 focus:ring-aureolin-800 font-medium rounded-full text-raisin_black-500">simpan</button>
       </form>
-      <p class="mt-8 mb-6">masih ragu atau punya pertanyaan? hubungan kami di <a href="https://wa.me/{{env('NO_WA')}}" class="text-emerald-800 underline">whatsapp</a> sekarang</p>
+      <p class="mt-8 mb-6">masih ragu atau punya pertanyaan? hubungan kami di <a href="https://wa.me/{{env('NO_WA')}}" class="text-emerald-800 underline" target="_blank" rel="noopener noreferer">whatsapp</a> sekarang</p>
     </section>
     <footer class="full-bleed">
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-3 lg:gap-6 bg-aureolin-500 px-6 pt-6 pb-14 justify-around">
@@ -109,15 +110,15 @@
         </div>
         <div>
           <h3 class="text-raisin_black-700 font-medium text-sm mb-3">alamat</h3>
-          <a href="https://maps.app.goo.gl/jniwSyJ64WBBWFCx6" target="_blank" rel="noopener noreferer" class="text-raisin_black-600 text-xs">Jl. Ponggalan, UH VII No.295B RT/RW 21/07, Giwangan, Umbulharjo, 55163, Yogyakarta</a>
+          <a href="{{env('LINK_GMAP')}}" target="_blank" rel="noopener noreferer" class="text-raisin_black-600 text-xs">{{env('ALAMAT')}}</a>
         </div>
         <div>
           <h3 class="text-raisin_black-700 font-medium text-sm mb-3">kontak</h3>
           <ul class="text-xs text-raisin_black-600 flex flex-col gap-1">
-            <li><a href="https://www.instagram.com/rechouse.doc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="flex flex-row gap-1 items-center">
+            <li><a href="{{env('LINK_IG')}}" class="flex flex-row gap-1 items-center" target="_blank" rel="noopener noreferer">
                 {!! file_get_contents(public_path('storage/icons/instagram.svg')) !!}
                 instagram</a></li>
-            <li><a href="https://wa.me/{{env('NO_WA')}}" class="flex flex-row gap-1 items-center">
+            <li><a href="https://wa.me/{{env('NO_WA')}}" class="flex flex-row gap-1 items-center" target="_blank" rel="noopener noreferer">
                 {!! file_get_contents(public_path('storage/icons/whatsapp.svg')) !!}
                 whatsapp</a></li>
           </ul>
