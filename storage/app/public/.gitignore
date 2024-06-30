@@ -5,5 +5,4 @@ img/*
 !pdf/
 pdf/*
 !favicons/
-favicons/*
 !.gitignore

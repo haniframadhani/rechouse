@@ -8,7 +8,6 @@
   <title>{{ config('app.name') }} | studio foto pilihanmu di jogja</title>
   <link rel="preload" href="{{ URL::asset('css/app.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="{{ URL::asset('css/app.css') }}"></noscript>
-  <link href="{{ URL::asset('css/aos.css') }}" rel="stylesheet">
   <link rel="shortcut icon" href="{{ URL::asset('/storage/favicons/favicon.ico') }}">
   <link rel="shortcut icon" href="{{ URL::asset('/storage/favicons/favicon.ico') }}" type="image/x-icon">
   <link rel="apple-touch-icon" href="{{ URL::asset('/storage/favicons/apple-touch-icon.png') }}">
@@ -147,12 +146,6 @@
       timer: 2000
     });
     @endif
-  </script>
-  <script src="{{ URL::asset('js/aos.js') }}"></script>
-  <script>
-    AOS.init({
-      once: true
-    });
   </script>
 </body>
 
