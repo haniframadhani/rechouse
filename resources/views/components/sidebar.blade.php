@@ -10,35 +10,35 @@
             <li>
                 <a href="{{ route('dashboard.index') }}"
                     class="flex items-center p-2 text-gray-50 rounded-lg hover:bg-blue-800 group capitalize">
-                    {!! file_get_contents(public_path('storage/icons/grid.svg')) !!}
+                    {!! file_get_contents(public_path('/storage/icons/grid.svg')) !!}
                     <span class="ms-3">dasbor</span>
                 </a>
             </li>
             <li>
                 <a href="{{ route('registrations.index') }}"
                     class="flex items-center p-2 text-gray-50 rounded-lg hover:bg-blue-800 group capitalize">
-                    {!! file_get_contents(public_path('storage/icons/calendar.svg')) !!}
+                    {!! file_get_contents(public_path('/storage/icons/calendar.svg')) !!}
                     <span class="flex-1 ms-3 whitespace-nowrap">pemesanan</span>
                 </a>
             </li>
             <li>
                 <a href="{{ route('history.index') }}"
                     class="flex items-center p-2 text-gray-50 rounded-lg hover:bg-blue-800 group capitalize">
-                    {!! file_get_contents(public_path('storage/icons/clock.svg')) !!}
+                    {!! file_get_contents(public_path('/storage/icons/clock.svg')) !!}
                     <span class="flex-1 ms-3 whitespace-nowrap">riwayat</span>
                 </a>
             </li>
             <li>
                 <a href="{{ route('setting') }}"
                     class="flex items-center p-2 text-gray-50 rounded-lg hover:bg-blue-800 group capitalize">
-                    {!! file_get_contents(public_path('storage/icons/settings.svg')) !!}
+                    {!! file_get_contents(public_path('/storage/icons/settings.svg')) !!}
                     <span class="flex-1 ms-3 whitespace-nowrap">pengaturan</span>
                 </a>
             </li>
             <li>
                 <a href="{{ route('logout') }}"
                     class="flex items-center p-2 text-gray-50 rounded-lg hover:bg-blue-800 group capitalize">
-                    {!! file_get_contents(public_path('storage/icons/log-out.svg')) !!}
+                    {!! file_get_contents(public_path('/storage/icons/log-out.svg')) !!}
                     <span class="flex-1 ms-3 whitespace-nowrap">keluar</span>
                 </a>
             </li>
