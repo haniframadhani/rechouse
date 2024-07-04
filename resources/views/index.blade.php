@@ -115,10 +115,10 @@
           <h3 class="text-raisin_black-700 font-medium text-sm mb-3">kontak</h3>
           <ul class="text-xs text-raisin_black-600 flex flex-col gap-1">
             <li><a href="{{env('LINK_IG')}}" class="flex flex-row gap-1 items-center" target="_blank" rel="noopener noreferer">
-                {!! file_get_contents(public_path('storage/icons/instagram.svg')) !!}
+                {!! file_get_contents(public_path('/storage/icons/instagram.svg')) !!}
                 instagram</a></li>
             <li><a href="https://wa.me/{{env('NO_WA')}}" class="flex flex-row gap-1 items-center" target="_blank" rel="noopener noreferer">
-                {!! file_get_contents(public_path('storage/icons/whatsapp.svg')) !!}
+                {!! file_get_contents(public_path('/storage/icons/whatsapp.svg')) !!}
                 whatsapp</a></li>
           </ul>
         </div>

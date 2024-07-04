@@ -41,10 +41,10 @@
                         class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-s-0 border-gray-300 rounded-e-md cursor-pointer">
                         <div id="toggle-current">
                             <div id="eye-current" class="block">
-                                {!! file_get_contents(public_path('storage/icons/eye.svg')) !!}
+                                {!! file_get_contents(public_path('/storage/icons/eye.svg')) !!}
                             </div>
                             <div id="eye-hide-current" class="hidden">
-                                {!! file_get_contents(public_path('storage/icons/eye-off.svg')) !!}
+                                {!! file_get_contents(public_path('/storage/icons/eye-off.svg')) !!}
                             </div>
                         </div>
                     </span>
@@ -68,10 +68,10 @@
                         class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-s-0 border-gray-300 rounded-e-md cursor-pointer">
                         <div id="toggle-new">
                             <div id="eye-new" class="block">
-                                {!! file_get_contents(public_path('storage/icons/eye.svg')) !!}
+                                {!! file_get_contents(public_path('/storage/icons/eye.svg')) !!}
                             </div>
                             <div id="eye-hide-new" class="hidden">
-                                {!! file_get_contents(public_path('storage/icons/eye-off.svg')) !!}
+                                {!! file_get_contents(public_path('/storage/icons/eye-off.svg')) !!}
                             </div>
                         </div>
                     </span>
@@ -96,10 +96,10 @@
                         class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-s-0 border-gray-300 rounded-e-md cursor-pointer">
                         <div id="toggle-re-new">
                             <div id="eye-re-new" class="block">
-                                {!! file_get_contents(public_path('storage/icons/eye.svg')) !!}
+                                {!! file_get_contents(public_path('/storage/icons/eye.svg')) !!}
                             </div>
                             <div id="eye-hide-re-new" class="hidden">
-                                {!! file_get_contents(public_path('storage/icons/eye-off.svg')) !!}
+                                {!! file_get_contents(public_path('/storage/icons/eye-off.svg')) !!}
                             </div>
                         </div>
                     </span>
