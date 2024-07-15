@@ -54,7 +54,7 @@ class AuthenticationController extends Controller
             'password' => $request->password
         ];
         if (Auth::attempt($credential)) {
-            return redirect()->route('registrations.index')->with(['login' => 'login berhasil']);
+            return redirect()->route('dashboard.index')->with(['login' => 'login berhasil']);
         }
         return back()->with('error', 'email atau password salah');
     }
