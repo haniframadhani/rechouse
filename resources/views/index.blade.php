@@ -51,6 +51,21 @@
       </div>
       <a href="{{ asset('/storage/pdf/price_list.pdf') }}" download="pricelist_self_photo" class="px-8 py-4 text-base focus:outline-none border-2 border-aureolin-400 hover:border-aureolin-600 hover:bg-aureolin-600 focus:ring-2 focus:ring-aureolin-800 font-medium rounded-full text-raisin_black-500">pricelist</a>
     </article>
+    <article class="mt-14" id="our-studio">
+      <h2 class="capitalize font-bold text-3xl text-raisin_black-700 mb-2">studio kami</h2>
+      <p class="text-raisin_black-600 text-base">Kamera, pencahayaan, latar belakang, aksesori, dan pengaturan kami bisa Anda manfaatkan sesuai dengan kreativitas dan imajinasi Anda.</p>
+      <div class="flex gap-2 lg:gap-4 flex-col md:flex-row mt-4 mb-6">
+        <div class="aspect-square overflow-hidden rounded-md" data-aos="fade-left">
+          <img loading="lazy" src="{{ asset('/storage/img/img_studio_1.webp') }}" alt="" class="object-cover w-full h-full">
+        </div>
+        <div class="aspect-square overflow-hidden rounded-md" data-aos="fade-left" data-aos-delay="50">
+          <img loading="lazy" src="{{ asset('/storage/img/img_studio_2.webp') }}" alt="" class="object-cover w-full h-full">
+        </div>
+        <div class="aspect-square overflow-hidden rounded-md" data-aos="fade-left" data-aos-delay="100">
+          <img loading="lazy" src="{{ asset('/storage/img/img_studio_3.webp') }}" alt="" class="object-cover w-full h-full">
+        </div>
+      </div>
+    </article>
     <section class="mt-14" id="review">
       <h2 class="capitalize font-bold text-3xl text-raisin_black-700 mb-2">kata mereka tentang kami</h2>
       {{-- google review by sociablekit --}}
@@ -106,6 +121,7 @@
           <h3 class="text-raisin_black-700 font-medium text-sm mb-3">paket</h3>
           <ul class="text-xs text-raisin_black-600 flex flex-col gap-1">
             <li><a href="#self-photo">self photo</a></li>
+            <li><a href="#our-studio">studio kami</a></li>
           </ul>
         </div>
         <div>
