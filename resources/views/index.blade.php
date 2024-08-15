@@ -8,7 +8,6 @@
   <title>{{ config('app.name') }} | studio foto pilihanmu di jogja</title>
   <link rel="preload" href="{{ URL::asset('css/app.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="{{ URL::asset('css/app.css') }}"></noscript>
-  <link href="{{ URL::asset('css/aos.css') }}" rel="stylesheet">
   <link rel="shortcut icon" href="{{ URL::asset('/storage/favicons/favicon.ico') }}">
   <link rel="shortcut icon" href="{{ URL::asset('/storage/favicons/favicon.ico') }}" type="image/x-icon">
   <link rel="apple-touch-icon" href="{{ URL::asset('/storage/favicons/apple-touch-icon.png') }}">
@@ -21,12 +20,12 @@
 <body class="bg-white_smoke-500 font-sans">
   <div class="container mx-auto sm:px-1 md:px-2 lg:px-3 xl:px-4">
     <div class="grid grid-cols-1 lg:grid-cols-3 items-center mt-11 lg:mt-4">
-      <div class="lg:col-span-1" data-aos="fade-down">
+      <div class="lg:col-span-1">
         <h1 class="text-5xl capitalize font-bold text-raisin_black-700">rechouse</h1>
         <p class="font-light text-xl mt-3 mb-8 text-raisin_black-600">Studio foto pilihanmu di Jogja</p>
         <a href="#booking" class="px-8 py-4 text-base focus:outline-none bg-aureolin-500 hover:bg-aureolin-600 focus:ring-2 focus:ring-aureolin-800 font-medium rounded-full text-raisin_black-500">booking sekarang</a>
       </div>
-      <div class="flex flex-row gap-2 lg:gap-4 lg:col-span-2 mt-10 lg:mt-0" data-aos="fade-down">
+      <div class="flex flex-row gap-2 lg:gap-4 lg:col-span-2 mt-10 lg:mt-0">
         <div class="aspect-[9/16] lg:aspect-[9/14] overflow-hidden rounded-md">
           <img loading="lazy" src="{{ asset('/storage/img/img_hero_1.webp') }}" alt="" class="object-cover w-full h-full">
         </div>
@@ -39,13 +38,13 @@
       <h2 class="capitalize font-bold text-3xl text-raisin_black-700 mb-2">self photo</h2>
       <p class="text-raisin_black-600 text-base">Nikmati kebebasan berkreasi dengan paket self photo kami! Dilengkapi dengan studio pribadi dan peralatan profesional, abadikan momen spesialmu sendiri dengan hasil berkualitas tinggi.</p>
       <div class="flex gap-2 lg:gap-4 flex-col md:flex-row mt-4 mb-6">
-        <div class="aspect-square overflow-hidden rounded-md" data-aos="fade-left">
+        <div class="aspect-square overflow-hidden rounded-md">
           <img loading="lazy" src="{{ asset('/storage/img/img_self_1.webp') }}" alt="" class="object-cover w-full h-full">
         </div>
-        <div class="aspect-square overflow-hidden rounded-md" data-aos="fade-left" data-aos-delay="50">
+        <div class="aspect-square overflow-hidden rounded-md">
           <img loading="lazy" src="{{ asset('/storage/img/img_self_2.webp') }}" alt="" class="object-cover w-full h-full">
         </div>
-        <div class="aspect-square overflow-hidden rounded-md" data-aos="fade-left" data-aos-delay="100">
+        <div class="aspect-square overflow-hidden rounded-md">
           <img loading="lazy" src="{{ asset('/storage/img/img_self_3.webp') }}" alt="" class="object-cover w-full h-full">
         </div>
       </div>
@@ -55,13 +54,13 @@
       <h2 class="capitalize font-bold text-3xl text-raisin_black-700 mb-2">studio kami</h2>
       <p class="text-raisin_black-600 text-base">Kamera, pencahayaan, latar belakang, aksesori, dan pengaturan kami bisa Anda manfaatkan sesuai dengan kreativitas dan imajinasi Anda.</p>
       <div class="flex gap-2 lg:gap-4 flex-col md:flex-row mt-4 mb-6">
-        <div class="aspect-square overflow-hidden rounded-md" data-aos="fade-left">
+        <div class="aspect-square overflow-hidden rounded-md">
           <img loading="lazy" src="{{ asset('/storage/img/img_studio_1.webp') }}" alt="" class="object-cover w-full h-full">
         </div>
-        <div class="aspect-square overflow-hidden rounded-md" data-aos="fade-left" data-aos-delay="50">
+        <div class="aspect-square overflow-hidden rounded-md">
           <img loading="lazy" src="{{ asset('/storage/img/img_studio_2.webp') }}" alt="" class="object-cover w-full h-full">
         </div>
-        <div class="aspect-square overflow-hidden rounded-md" data-aos="fade-left" data-aos-delay="100">
+        <div class="aspect-square overflow-hidden rounded-md">
           <img loading="lazy" src="{{ asset('/storage/img/img_studio_3.webp') }}" alt="" class="object-cover w-full h-full">
         </div>
       </div>
@@ -163,12 +162,6 @@
       timer: 2000
     });
     @endif
-  </script>
-  <script src="{{ URL::asset('js/aos.js') }}"></script>
-  <script>
-    AOS.init({
-      once: true
-    });
   </script>
 </body>
 
